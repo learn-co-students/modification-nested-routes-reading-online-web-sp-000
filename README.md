@@ -1,3 +1,10 @@
+<!-- # <% if @post.author.nil? %>       Allowed selection of existing Authors from within posts.new.html.erb before creating author_id_field Helper
+#   <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %>
+# <br />
+# <% end %> -->
+
+
+
 # Modifying Nested Resources
 
 ## Objectives
@@ -100,7 +107,7 @@ Now we know the `author_id` will be allowed for mass-assignment in the `create` 
 
 Let's try it out. Go to an author's new post page, and make a post. We should see the author's name in the byline now!
 
-Why didn't we have to make a nested resource route for `:create` in addition to `:new`? 
+Why didn't we have to make a nested resource route for `:create` in addition to `:new`?
 
 The `form_for(@post)` helper in `posts/_form.html.erb` will automatically route to `POST posts_controller#create` for a new `Post`. By carrying the `author_id` as we did and allowing it through strong parameters, the existing `create` route and action can be used without needing to do anything else.
 
