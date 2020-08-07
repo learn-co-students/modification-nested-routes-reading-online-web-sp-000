@@ -7,7 +7,7 @@
 3. Review the use of view helpers to keep views clean.
 
 ## Lesson
-
+##
 Continuing with our blog application, we're going to extend our nested resources to allow for creating and modifying blog posts by author.
 
 ### Creating A New Post For An Author
