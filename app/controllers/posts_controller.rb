@@ -39,13 +39,19 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
-  def edit
+  def edit    # /authors/1/posts/1/edit
     if params[:author_id]
+      # Here we're looking for the existence of params[:author_id] that comes from nested route
       author = Author.find_by(id: params[:author_id])
       if author.nil?
         redirect_to authors_path, alert: "Author not found."
+        # If params[:author_id] is there, we make sure to find a valid author by checking if author.nil? If we can't, we redirect them to the authors_path with a flash[:alert]
       else
         @post = author.posts.find_by(id: params[:id])
+        # If we do find the author (author isn't nil), we next want to find the post by params[:id]
+        # Instead of directly looking for Post.find(), we need to filter the query through our author.posts collection to make sure we find it in that author's posts. 
+        # ***** find method doesn't show nil, find_by does. *****
+        # It may be a valid post id, but it might not belong to that author, which makes this an invalid request, so we need to check!!!
         redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
       end
     else
