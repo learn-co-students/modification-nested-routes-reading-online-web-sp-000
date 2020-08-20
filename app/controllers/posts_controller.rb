@@ -51,8 +51,8 @@ class PostsController < ApplicationController
         # If we do find the author (author isn't nil), we next want to find the post by params[:id]
         # Instead of directly looking for Post.find(), we need to filter the query through our author.posts collection to make sure we find it in that author's posts. 
         # ***** find method doesn't show nil, find_by does. *****
-        # It may be a valid post id, but it might not belong to that author, which makes this an invalid request, so we need to check!!!
         redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
+          # It may be a valid post id, but it might not belong to that author, which makes this an invalid request, so we need to check!!!
       end
     else
       @post = Post.find(params[:id])
