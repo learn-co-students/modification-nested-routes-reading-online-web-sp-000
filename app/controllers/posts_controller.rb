@@ -13,7 +13,7 @@ class PostsController < ApplicationController
   def show
    
     if params[:author_id]
-      @post = Author.find
+      @post = Author.find(params[:author_id]).posts.find(params[:id])
      
     else
      
@@ -23,7 +23,11 @@ class PostsController < ApplicationController
 
   
 def new
-  @post = Post.new(author_id: params[:author_id])
+  if params[:author_id] && !Author.exists?(params[:author_id])
+    redirect_to authors_path, alert: "Author not found."
+  else
+    @post = Post.new(author_id: params[:author_id])
+  end
 end
 
   def create
@@ -42,7 +46,17 @@ end
   end
 
   def edit
-    @post = Post.find(params[:id])
+    if params[:author_id]
+      author = Author.find_by(id: params[:author_id])
+      if author.nil?
+        redirect_to authors_path, alert: "Author not found."
+      else
+        @post = author.posts.find_by(id: params[:id])
+        redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
+      end
+    else
+      @post = Post.find(params[:id])
+    end
   end
 
   private

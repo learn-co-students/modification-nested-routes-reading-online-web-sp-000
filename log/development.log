@@ -6199,3 +6199,118 @@ DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please ch
   Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
   Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
   Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+Started GET "/posts/38" for ::1 at 2020-10-30 21:56:29 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (69.9ms)
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 9.7ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"new", :author_id=>nil, :controller=>"posts"} missing required keys: [:author_id]):
+    1: <h1><%= @post.author.name %></h1>
+    2:  
+    3: <%= link_to "New Post", new_author_post_path(@author) %>
+    4:  
+    5: <h1><%= @post.title %></h1>
+    6: <p>by <%= link_to @post.author.name, author_path(@post.author) if @post.author %> 
+  
+app/views/posts/show.html.erb:3:in `_app_views_posts_show_html_erb__1553462992314326577_70262610613200'
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (147.1ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (32.7ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.8ms)
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (222.8ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (7.9ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers_jakegonchar__rvm_gems_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb___3083355453387705430_70262619001180 at /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.8ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendering /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/jakegonchar/.rvm/gems/ruby-2.6.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.3ms)
+Started GET "/posts/38" for ::1 at 2020-10-30 21:56:52 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 148ms (Views: 139.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/38" for ::1 at 2020-10-30 22:06:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 140ms (Views: 125.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/7/posts/38/edit" for ::1 at 2020-10-30 22:07:03 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"7", "id"=>"38"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (16.3ms)
+  Rendered posts/edit.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 143ms (Views: 132.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/74564/posts/38/edit" for ::1 at 2020-10-30 22:08:52 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"74564", "id"=>"38"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (13.9ms)
+  Rendered posts/edit.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 140ms (Views: 126.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/38" for ::1 at 2020-10-30 22:08:56 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BHHJ0RjnpOAxaegM6u+wkL2/S5hZZcNOQeKM14ZmliYqVJxCirgrmfwAidhEmTGVbL079xfoLV/boDY0u7Fiuw==", "post"=>{"author_id"=>"7", "title"=>"V", "description"=>"dsv"}, "commit"=>"Update Post", "id"=>"38"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/38
+Completed 302 Found in 27ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/38" for ::1 at 2020-10-30 22:08:56 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 131ms (Views: 118.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-10-30 22:29:53 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (66.6ms)
+  Rendered posts/new.html.erb within layouts/application (103.8ms)
+Completed 200 OK in 312ms (Views: 261.1ms | ActiveRecord: 8.8ms)
+
+
