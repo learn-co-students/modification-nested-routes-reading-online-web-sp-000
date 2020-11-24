@@ -1,4 +1,6 @@
 <%= form_for(@post) do |f| %>
+  <%= author_id_field(@post) %>
+  <br>
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
@@ -7,3 +9,18 @@
 
   <%= f.submit %>
 <% end %>
+<!--
+hidden_field problem
+Sure! It used when you want to send some form data without the user having to select it
+Or enter it
+So, for example, let's say you are on the /posts/5 page
+And you have a form to create a comment for that post
+So, you have a form to create a comment for the post on the post show page
+You need the server to know for which post you are creating the comment, the post with the id of 5
+(since you are at the /posts/5 route)
+You don't want to ask the user to select which post they are creating a comment for
+The user will assume that the post for which they are creating the comment is the post they are viewing
+So, we need a way to send some data in the form, without having to ask the user to input that data
+That is when we use a hidden field - we can send the comment's post_id of 5 in the hidden field so that when the comment is created, it knows which post to related to, without having to ask the user to input that data into the form
+
+BUT NOW WE CHANGED THAT AND MOVED IT TO STUPID HELPER METHOD. WOW.-->
