@@ -1,6 +1,7 @@
 <h1>Authors</h1>
 <ul>
   <% @authors.each do |author| %>
-    <li><%= link_to author.name, author_path(author) %></li>
+    <li><%= link_to author.name, author_path(author) %>
+    <%= link_to "(Newest post:#{author.posts.last.title})", author_posts_path(author) %></li>
   <% end %>
 </ul>
