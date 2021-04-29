@@ -3742,3 +3742,119 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+Started GET "/" for ::1 at 2021-04-28 20:44:32 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/allisonmacqueen/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/allisonmacqueen/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (10.5ms)
+Completed 200 OK in 43ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for ::1 at 2021-04-28 20:44:36 -0400
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (2.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 1260ms (Views: 1227.9ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/authors/2" for ::1 at 2021-04-28 20:44:41 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (1.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (116.6ms)
+Completed 200 OK in 157ms (Views: 136.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2021-04-28 20:44:42 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (43.2ms)
+  Rendered posts/new.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 78ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2021-04-28 20:45:52 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (11.8ms)
+  Rendered posts/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2021-04-28 20:47:12 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eJVbRZeb1wcDZI6xZ1pmKbzPJQJeS08R88Ky7HCe/JjS1eiyP+MS7KJOnZszhlGHIUuyAZF1SxyfUO/FOHg7fQ==", "post"=>{"author_id"=>"2", "title"=>"Testing", "description"=>"This is a test"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Testing"], ["description", "This is a test"], ["created_at", "2021-04-29 00:47:12.403281"], ["updated_at", "2021-04-29 00:47:12.403281"], ["author_id", 2]]
+  [1m[35m (26.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 64ms (ActiveRecord: 30.3ms)
+
+
+Started GET "/posts/14" for ::1 at 2021-04-28 20:47:12 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 97ms (Views: 81.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/14/edit" for ::1 at 2021-04-28 20:50:05 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (3.7ms)
+  Rendered posts/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 58ms (Views: 38.4ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/posts/14" for ::1 at 2021-04-28 20:50:24 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5UGA4QB4wIRLm9iwBkusYm9jNpsdHXvD3yTYRwYi3kxPATMWqAAFb+qxy5pSl5vM8uehmNIjf86ztoVuTsQZqQ==", "post"=>{"author_id"=>"2", "title"=>"Testing Edit Function", "description"=>"This is a test of the edit function"}, "commit"=>"Update Post", "id"=>"14"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "Testing Edit Function"], ["description", "This is a test of the edit function"], ["updated_at", "2021-04-29 00:50:24.607084"], ["id", 14]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 15ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/posts/14" for ::1 at 2021-04-28 20:50:24 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.9ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 95ms (Views: 88.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/authors/14/posts/14/edit" for ::1 at 2021-04-28 20:51:21 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"14", "id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.8ms)
+  Rendered posts/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 65ms (Views: 63.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/1234/posts/14/edit" for ::1 at 2021-04-28 20:51:34 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"1234", "id"=>"14"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (4.4ms)
+  Rendered posts/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
