@@ -3742,3 +3742,458 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 5]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 7]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 9]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 11]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 13]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2020-02-03 20:58:28.681209"], ["updated_at", "2020-02-03 20:58:28.681209"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2020-02-03 20:58:28.687073"], ["updated_at", "2020-02-03 20:58:28.687073"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2020-02-03 20:58:28.693517"], ["updated_at", "2020-02-03 20:58:28.693517"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["created_at", "2020-02-03 20:58:28.705897"], ["updated_at", "2020-02-03 20:58:28.705897"], ["author_id", 4]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["created_at", "2020-02-03 20:58:28.712951"], ["updated_at", "2020-02-03 20:58:28.712951"], ["author_id", 5]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["created_at", "2020-02-03 20:58:28.719107"], ["updated_at", "2020-02-03 20:58:28.719107"], ["author_id", 6]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2020-02-02 00:00:00"], ["updated_at", "2020-02-03 20:58:28.725735"], ["id", 16]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-02-03 14:58:41 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/rehmanali/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/rehmanali/.rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (6.4ms)
+Completed 200 OK in 39ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 14:58:47 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 933ms (Views: 925.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 14:58:50 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 77ms (Views: 66.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-02-03 14:58:52 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (64.5ms)
+  Rendered posts/new.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-02-03 14:59:10 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UURmC2fkfayzq1CDoCj9e7b8AoB/rK4+XQpMpiYfk+6VkfLSf7QixxJbEtAMvFVJJ8AjMB3xD2ovnyzFlmi5jw==", "post"=>{"title"=>"Hello", "description"=>"My name is John."}, "commit"=>"Create Post"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "My name is John."], ["created_at", "2020-02-03 20:59:10.146004"], ["updated_at", "2020-02-03 20:59:10.146004"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:52025/posts/17
+Completed 302 Found in 10ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2020-02-03 14:59:10 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2020-02-03 15:00:08 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/17" for 127.0.0.1 at 2020-02-03 15:00:09 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-02-03 15:00:10 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (7.6ms)
+  Rendered posts/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 15:00:12 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 15:00:12 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 15:00:13 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-02-03 15:00:14 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.4ms)
+  Rendered posts/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-02-03 15:00:25 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VhVLdcKnpDttnTtkOSwsjvq8EJbM4H/NAVq3qeqhd4pjcH0z1rB+0xGNr48cBiAqtbR8jluIKtGkAq9F92vvw==", "post"=>{"author_id"=>"4", "title"=>"Hello", "description"=>"My name is john"}, "commit"=>"Create Post"}
+Unpermitted parameter: author_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "My name is john"], ["created_at", "2020-02-03 21:00:25.810920"], ["updated_at", "2020-02-03 21:00:25.810920"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:52025/posts/18
+Completed 302 Found in 8ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/posts/18" for 127.0.0.1 at 2020-02-03 15:00:25 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/18/edit" for 127.0.0.1 at 2020-02-03 15:00:27 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.3ms)
+  Rendered posts/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 15:00:59 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 40ms (Views: 33.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-02-03 15:01:01 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.0ms)
+  Rendered posts/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:01:08 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:01:09 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:01:10 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:01:13 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:01:14 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4" for 127.0.0.1 at 2020-02-03 15:01:15 -0600
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/4/posts/new" for 127.0.0.1 at 2020-02-03 15:01:16 -0600
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.0ms)
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-02-03 15:01:22 -0600
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q/dRkloVM7Fxy9GKYC3Nb+s0csZIfrkuhYUv3XmwMRGHIsVLQkVs2tA7k9nMuWVdeghTdiojGHr3EE++yccbcA==", "post"=>{"author_id"=>"4", "title"=>"Hello", "description"=>"My name is john\r\n"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "My name is john\r\n"], ["created_at", "2020-02-03 21:01:22.753013"], ["updated_at", "2020-02-03 21:01:22.753013"], ["author_id", 4]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:52025/posts/19
+Completed 302 Found in 11ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2020-02-03 15:01:22 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2020-02-03 15:05:36 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 34ms (Views: 18.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/authors/4/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:05:37 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"4", "id"=>"19"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.2ms)
+  Rendered posts/edit.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/19" for 127.0.0.1 at 2020-02-03 15:05:43 -0600
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zvZue1Egx8nVute6o5C1OOEnLIo1axeONo5o3PuJsBsKI/qiSXCYonRKlekPBB0KcBsNOlc2ttpEGwi/S/6aeg==", "post"=>{"author_id"=>"4", "title"=>"Hello", "description"=>"My name is david\r\n"}, "commit"=>"Update Post", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "My name is david\r\n"], ["updated_at", "2020-02-03 21:05:43.412559"], ["id", 19]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://127.0.0.1:52025/posts/19
+Completed 302 Found in 11ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2020-02-03 15:05:43 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:06:38 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:07:00 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.8ms)
+  Rendered posts/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:07:01 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.8ms)
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:07:01 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (1.1ms)
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/19" for 127.0.0.1 at 2020-02-03 15:07:04 -0600
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:07:15 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/edit.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:09:23 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 123456], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:52025/authors
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:09:23 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/123456/posts/19/edit" for 127.0.0.1 at 2020-02-03 15:09:29 -0600
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"19"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 123456], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:52025/authors
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for 127.0.0.1 at 2020-02-03 15:09:29 -0600
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
