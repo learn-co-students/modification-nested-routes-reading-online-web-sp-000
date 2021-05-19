@@ -5,9 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+puts 'destroyed'
 Post.destroy_all
 Author.destroy_all
 
+puts 'creating seeds'
 author1 = Author.create(name: "Stephen King", genre: "Romance", bio: "Writes a lot of scary things.")
 author2 = Author.create(name: "Ariana Huffington", genre: "Comedy", bio: "Up and comer. One to watch.")
 author3 = Author.create(name: "Horse Ebooks", genre: "?????", bio: "Eclectic.")
